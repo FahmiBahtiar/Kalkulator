@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <TextView
+        android:id="@+id/tvnamapengguna"
+        android:hint="Email atau nama pengguna"
+        android:textSize="35dp"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:textColorHint="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/txtemail"
+        android:layout_width="match_parent"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:background="#cedbda"/>
+
+
+    <TextView
+        android:id="@+id/tvkatasandi"
+        android:hint="Kata Sandi"
+        android:textSize="33dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:textColorHint="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/txtpassword"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:background="#cedbda"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvpasswordsalah"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btnmasuk"
+        android:hint="Masuk"
+        android:textColorHint="#000"
+        android:background="@drawable/buttoncustom"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvlupasandi"
+        android:hint="Lupa Kata Sandi Kamu ?"
+        android:textColorHint="#ffffff"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
