@@ -39,6 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
 
     <EditText
         android:id="@+id/txtpassword"
@@ -48,6 +52,7 @@
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <TextView
         android:id="@+id/tvpasswordsalah"
         android:text=""
@@ -58,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnmasuk"
         android:hint="Masuk"
@@ -82,6 +87,7 @@
         android:layout_marginRight="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

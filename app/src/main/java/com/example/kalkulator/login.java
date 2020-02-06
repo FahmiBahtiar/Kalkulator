@@ -26,7 +26,6 @@ public class login extends AppCompatActivity {
         tv1 = findViewById(R.id.tvnamapengguna);
         tv2 = findViewById(R.id.tvkatasandi);
         tv3 = findViewById(R.id.tvlupasandi);
-        tv4 = findViewById(R.id.tvpasswordsalah);
         btn1 = findViewById(R.id.btnmasuk);
 
         btn1.setOnClickListener(new View.OnClickListener() {
