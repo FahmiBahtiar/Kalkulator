@@ -3,6 +3,7 @@ package com.example.kalkulator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class login extends AppCompatActivity {
     EditText txt1,txt2;
     TextView tv1, tv2, tv3, tv4;
     Button btn1;
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +30,23 @@ public class login extends AppCompatActivity {
         tv2 = findViewById(R.id.tvkatasandi);
         tv3 = findViewById(R.id.tvlupasandi);
         btn1 = findViewById(R.id.btnmasuk);
+        pref = getSharedPreferences("login", MODE_PRIVATE);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(txt1.getText().toString().equals("hambaallah@gmail.com") && txt2.getText().toString().equals("hambaallah")){
+                if (txt1.getText().toString().equals("hambaallah@gmail.com") && txt2.getText().toString().equals("hambaallah")) {
                     Toast.makeText(login.this, "Login Success", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(login.this, MainActivity.class);
                     intent.putExtra("email", txt1.getText().toString());
                     startActivity(intent);
-                }else{
+
+                    editor = pref.edit();
+                    editor.putString("userid", txt1.getText().toString());
+                    editor.apply();
+                    finish();
+                } else {
                     txt2.setError("Invalid Password");
                 }
 
