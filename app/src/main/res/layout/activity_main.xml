@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvuser"
-        android:text="username"/>
+        android:text="Username :"/>
 
     <EditText
         android:hint="Angka 1"
@@ -72,5 +72,12 @@
         android:text=" Hasil Dari Perhitungan :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:text="LogOut"
+        android:id="@+id/btnlogout"/>
 
 </LinearLayout>
