@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getSharedPreferences("logout", MODE_PRIVATE);
                 sharedPreferences.edit().clear().commit();
                 Intent i = new Intent(MainActivity.this, login.class);
                 startActivity(i);
